@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+
+    <!-- Live Awesome CSS-->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Fichiers CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center;">Diaporama</h1>
+
+    
+        <!-- Conteneur principal de tout le diaporama -->
+        <div class="diapo">
+            <!-- Conteneur des "diapos" -->
+            <div class="elements">
+                <!-- Première diapo -->
+                <div class="element active">
+                    <img src="images/1.jpg" alt="Image 1">
+                    <div class="texte">
+                        <h2>Toile d'araignée</h2>
+                    </div>
+                </div>
+                <!-- Deuxième diapo -->
+                <div class="element">
+                    <img src="images/2.jpg" alt="Image 2">
+                    <div class="texte">
+                        <h2>Abeille</h2>
+                    </div>
+                </div>
+                <!-- Troisième diapo -->
+                <div class="element">
+                    <img src="images/3.jpg" alt="Image 3">
+                    <div class="texte">
+                        <h2>Oiseaux marin</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Flèches de navigation  en utilisant les classes merci Line Awesome-->
+            <i id="nav-gauche" class="las la-chevron-left"></i>
+            <i id="nav-droite" class="las la-chevron-right"></i>
+        </div>
+
+        <!-- 3 boutons images -->
+        
+        <div class="imgButton">
+            <h3>Vous pouvez ajouter une photo au diapo, laquelle préférez vous?</h3>
+            <p>cliquer sur l'image choisie</p>
+            <a href="#" onclick="ajouterImage(4, 'Feuille')"><img src="images/4.jpg" alt=""></a>
+            <a href="#" onclick="ajouterImage(5, 'Ecureuil')"><img src="images/5.jpg" alt=""></a>
+            <a href="#" onclick="ajouterImage(6, 'Renard')"><img src="images/6.jpg" alt=""></a>
+            <a href="#" onclick="ajouterImage(7, 'Oiseaux')"><img src="images/7.jpg" alt=""></a>
+        </div>
+
+
+    </main>
+
+    <!--  Tuto : https://nouvelle-techno.fr/actualites/creer-un-diaporama-en-html-css-js  -->
+    <!-- Fichiers JS -->
+    <script src="js/scripts.js"></script>
+    <!-- Jquery  utiliser seulement pour la fonction remove()-->
+    <script   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="   crossorigin="anonymous"></script>
+</body>
+</html>
+

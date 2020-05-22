@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+}
+
+/* Centrer le conteneur*/
+main{
+    width: 80%;
+    margin: auto;
+}
+
+/* Tout ce qui dépasse est coupé*/
+.diapo{
+    position: relative;
+    overflow: hidden;
+}
+
+/* Placement des fleches */
+#nav-droite, #nav-gauche{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3em;
+}
+
+/* place la fleche droite à 20px du bord*/
+#nav-droite{
+    right: 20px;
+}
+
+/* place la fleche gauche à 20px du bord*/
+#nav-gauche{
+    left: 20px;
+}
+
+.elements{
+    display: flex;
+    transition: 1s linear; /* Effet défilement*/
+}
+
+.element{
+    flex: 1 0 100%; /* 1 place au maximun, au minimun 0 et s'étendre à 100% */
+    position: relative;
+}
+
+/* les images occupe 100% */
+.element > img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Centre le texte sur les diapaos*/
+.texte{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255,255,255,0.4);
+    padding: 30px;
+}
+
+.imgButton{
+    text-align: center;
+}
+.imgButton img{
+    width: 100px;
+    margin: auto;
+}   
+
+
+
+
+
