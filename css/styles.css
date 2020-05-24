@@ -2,16 +2,30 @@ body{
     margin: 0;
 }
 
+
 /* Centrer le conteneur*/
 main{
-    width: 80%;
+    width: 45%;
     margin: auto;
 }
+@media only screen and (max-width: 1000px){
+    main{
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
 
 /* Tout ce qui dépasse est coupé*/
 .diapo{
     position: relative;
     overflow: hidden;
+}
+
+/* Grossie la police affichant le nombre d'image */
+#nbrImage{
+    font-size: 3vh;
 }
 
 /* Placement des fleches */
@@ -25,12 +39,12 @@ main{
 
 /* place la fleche droite à 20px du bord*/
 #nav-droite{
-    right: 20px;
+    right: 10px;
 }
 
 /* place la fleche gauche à 20px du bord*/
 #nav-gauche{
-    left: 20px;
+    left: 10px;
 }
 
 .elements{

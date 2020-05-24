@@ -113,41 +113,31 @@ function ajouterImage(numero, text){
     slides = Array.from(elements.children);
 
     // affiche le nombre d'image dans le carrousel
-    nbreImage();
+    showNbrImg();
 
     // image suivante
     slideNext();
  
 }
 
-// cette fonction ajoute un h4 affichant le nombre d'images dans le caroussel (slides = collection)
-function nbreImage(){
-    // on efface le précédent text avec Jquery function
-    $('h4').remove(); 
-    
-    // le code du html du texte
-    const divNbreImages =
-    `<div id="nbreImg" style="text-align: center;">
-        <h4 id="textNbre"> La caroussel contient ${slides.length} images</h4>
-    </div>`;
 
-    const diapo = document.querySelector(".diapo");
 
-    // on insere le code du texte à la position beforebegin
-    diapo.insertAdjacentHTML("beforebegin", divNbreImages);
+function showNbrImg(){
+    // récupere la longueur du tableau d'images
+    var nombreImage = slides.length;
+
+    // sélectonne <a>
+    var link = document.querySelector('a');
+
+    // créer un noeuds textuel contenant le nombre d'images actuel
+    var newLabel = document.createTextNode(nombreImage);
+
+    // remplace l'ancien nombre le nouveau
+    link.replaceChild(newLabel, link.firstChild);
+   
+
 
 }
-
-// essayer de remplacer le remove h4 jquery
-/*
-
-function removeElement(elementId) {
-    // Removes an element from the document.
-    var element = document. getElementById(elementId);
-    element. parentNode. removeChild(element);
-    }
-
-*/
 
 
 
